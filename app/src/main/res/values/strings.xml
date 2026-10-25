@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">影视壳</string>
+    <string name="nav_web">网页</string>
+    <string name="nav_player">播放器</string>
+</resources>
