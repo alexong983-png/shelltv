@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             fullscreen.addView(view, ViewGroup.LayoutParams(-1, -1))
             fullscreen.visibility = View.VISIBLE
             mainContent.visibility = View.GONE
-            setImmersive(true)
+            setFullscreenMode(true)
         }
 
         override fun onHideCustomView() {
@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
             customCallback?.onCustomViewHidden()
             customView = null
             customCallback = null
-            setImmersive(false)
+            setFullscreenMode(false)
         }
     }
 
@@ -218,7 +218,7 @@ class MainActivity : AppCompatActivity() {
         player.play()
     }
 
-    private fun setImmersive(on: Boolean) {
+    private fun setFullscreenMode(on: Boolean) {
         val c = WindowCompat.getInsetsController(window, window.decorView)
         if (on) {
             c.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
